@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: Gainsboro;
+  margin: 0;
+}
+div.container {
+    width: 100%;
+    
+}
+/* Style the header */
+.header {
+    background-color: Gainsboro;
+    text-align: center;
+    color:black;
+    height:70px;
+    font-size: 30px;
+    font-family: Lucida Calligraphy;
+    /*
+    background: -webkit-linear-gradient(#000000, #808080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+.head{
+  font-family:ChildrenoftheStarlight;
+  src:url(ChildrenoftheStarlight.otf);
+  font-style: italic;
+
+  width:100%;
+
+  margin: 0 auto;
+  text-align: center;
+
+  color:#313131;
+  font-size:30px;
+  font-weight: bold;
+
+  -webkit-animation:colorchange 20s infinite alternate;
+
+
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+
+    color: #8c8c8c;
+  }
+
+  10% {
+
+    color: #808080;
+  }
+
+  20% {
+
+    color: #0d0d0d;
+  }
+
+  30% {
+
+    color: #737373;
+  }
+
+  40% {
+
+    color: #1a1a1a;
+  }
+
+  50% {
+
+    color: #595959;
+  }
+
+  60% {
+
+    color: #262626;
+  }
+
+  70% {
+
+    color: #4d4d4d;
+  }
+  80% {
+
+    color: #333333;
+  }
+
+  90% {
+
+    color: #404040;
+  }
+
+  100% {
+
+    color: grey;
+  }
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    width:100%;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+#slideshow {
+  position: absolute;
+  height: 50%;
+  overflow: hidden;
+  margin: 0px auto;
+  padding: 5px;
+  background: Gainsboro;
+  animation: mymove 7s infinite;
+  display: inline-block;
+
+}
+
+@keyframes mymove {
+  from {
+    left: 10px;
+  }
+  to {
+    left: -95%;
+  }
+}
+
+#slideshow img {
+  height: 100%;
+  display: inline-block;
+}
+
+/*footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    clear:both;
+    bottom: 0;
+}*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#333 ; 
+}
+/*
+.grid-container {
+  display: grid;
+  grid-row-gap: 80px;
+  grid-column-gap: 80px;
+  grid-template-columns: auto auto auto auto;
+  padding-top: 380px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  padding-bottom: 250px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    
+}
+
+.row1,.row2,.row3{
+  padding-top: 5px; 
+}
+
+.row{
+  padding-top: 350px;
+
+
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.db{
+  display:inline-grid;
+  text-align: justify;
+  font-family: "Times New Roman";
+  font-size: 20px;
+}
+
+.db button{
+  background-color:#999999;
+  box-shadow: 2px 2px 5px ;
+  width:40px;
+  border-radius: 8px 12px;
+  cursor: pointer;
+
+}

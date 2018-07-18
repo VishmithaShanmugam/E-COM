@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html ng-app="Unique">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  type="text/css" href="front.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="angular.min.js"></script>
+<script>
+  angular.module("Unique",[]).
+  controller("ctrl1",function($scope,$http){
+      $http({
+        url:"/dresslist",
+        method:"GET"
+      }).then(function(response){
+      $scope.items = response.data;
+      });
+
+});
+</script>
+</head>
+<body ng-controller="ctrl1">
+<div class="container">
+<div class="header">
+  <header>
+ <div class="head"><h1>The Tiffany's</h1></div></div>
+</header>
+</div>
+
+<div class="topnav">
+  <a href="front.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div id="slideshow">
+  <img id="img1" src="a1.png" alt="1" />
+  <img id="img2" src="a2.jpg" alt="2" />
+  <img id="img3" src="b3.jpg" alt="3" />
+
+  </div>
+  <!--
+<center>
+  <div class="grid-container">
+  <div class="grid-item">
+    <img src="1.jpg" height="250" width="250">
+  </div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+</div>
+</center>-->
+ <div class="db">
+<div class="row">
+ 
+  <div class="column" ng-init="myVar='1.jpg'">
+    <img ng-src="{{myVar}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[0].About }} <br>
+      {{ items[0].Size}} <br>
+      {{ items[0].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+</div>
+  <div class="column" ng-init="myVar2='2.jpg'">
+    <img ng-src="{{myVar2}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[1].About }} <br>
+      {{ items[1].Size}} <br>
+      {{ items[1].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar3='3.jpg'">
+    <img ng-src="{{myVar3}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[2].About }} <br>
+      {{ items[2].Size}} <br>
+      {{ items[2].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar4='4.jpg'">
+    <img ng-src="{{myVar4}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[3].About }} <br>
+      {{ items[3].Size}} <br>
+      {{ items[3].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar5='5.jpg'">
+    <img ng-src="{{myVar5}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[4].About }} <br>
+      {{ items[4].Size}} <br>
+      {{ items[4].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+</div>
+
+<div class="row1">
+  <div class="column" ng-init="myVar6='6.jpg'">
+    <img ng-src="{{myVar6}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[5].About }} <br>
+      {{ items[5].Size}} <br>
+      {{ items[5].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar7='7.jpg'">
+    <img ng-src="{{myVar7}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[6].About }} <br>
+      {{ items[6].Size}} <br>
+      {{ items[6].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar8='23.jpg'">
+    <img ng-src="{{myVar8}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[7].About }} <br>
+      {{ items[7].Size}} <br>
+      {{ items[7].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar9='24.jpg'">
+    <img ng-src="{{myVar9}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[8].About }} <br>
+      {{ items[8].Size}} <br>
+      {{ items[8].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar10='10.jpeg'">
+    <img ng-src="{{myVar10}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[9].About }} <br>
+      {{ items[9].Size}} <br>
+      {{ items[9].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+</div>
+
+
+<div class="row2">
+  <div class="column" ng-init="myVar11='13.jpg'">
+    <img ng-src="{{myVar11}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[10].About }} <br>
+      {{ items[10].Size}} <br>
+      {{ items[10].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar12='14.jpg'">
+    <img ng-src="{{myVar12}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[11].About }} <br>
+      {{ items[11].Size}} <br>
+      {{ items[11].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar13='15.jpg'">
+    <img ng-src="{{myVar13}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[12].About }} <br>
+      {{ items[12].Size}} <br>
+      {{ items[12].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar14='16.jpg'">
+    <img ng-src="{{myVar14}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[13].About }} <br>
+      {{ items[13].Size}} <br>
+      {{ items[13].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar15='17.jpg'">
+    <img ng-src="{{myVar15}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[14].About }} <br>
+      {{ items[14].Size}} <br>
+      {{ items[14].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+</div>
+
+<div class="row3">
+  <div class="column" ng-init="myVar16='18.jpg'">
+    <img ng-src="{{myVar16}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[15].About }} <br>
+      {{ items[15].Size}} <br>
+      {{ items[15].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar17='19.jpg'">
+    <img ng-src="{{myVar17}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[16].About }} <br>
+      {{ items[16].Size}} <br>
+      {{ items[16].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar18='20.jpg'">
+    <img ng-src="{{myVar18}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[17].About }} <br>
+      {{ items[17].Size}} <br>
+      {{ items[17].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar19='21.jpg'">
+    <img ng-src="{{myVar19}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[18].About }} <br>
+      {{ items[18].Size}} <br>
+      {{ items[18].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+  <div class="column" ng-init="myVar20='22.jpg'">
+    <img ng-src="{{myVar20}}" alt="Image" style="width:100%" height="350px">
+    <span> {{ items[19].About }} <br>
+      {{ items[19].Size}} <br>
+      {{ items[19].Price}}<br>
+  <button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</span>
+  </div>
+</div>
+</div>
+<!--<div class="db" ng-repeat="item in items" >
+   <div class="column" ng-init="myVar='1.jpg'">
+    <img ng-src="{{myVar}}" alt="Image" style="width:100%" height="350px">
+  </div>
+{{item.About}} <br>
+{{item.Size}} <br>
+{{item.Price}} <br>
+<button type="submit" <i class="fa fa-shopping-cart"></i></button>
+</div>-->
+ <!-- <footer>Copyright &copy; W3Schools.com</footer>-->
+  </div>
+
+</body>
+</html>
